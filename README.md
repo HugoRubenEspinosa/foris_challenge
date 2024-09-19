@@ -18,6 +18,8 @@ Docker
 
 ## Pasos para ejecutar la solución
 Descargar el código en el directorio que desees
+https://github.com/HugoRubenEspinosa/foris_challenge/archive/refs/heads/main.zip
+
 Crear un entorno virtual 
 ```
 python -m venv venv
@@ -26,4 +28,7 @@ Instalar las dependencias
 ```
 pip install -r requirements.txt
 ```
-Ejecutar la aplicacion ```python ./src/main.py```
+Ejecutar la aplicacion 
+```
+python ./src/main.py
+```
