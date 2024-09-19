@@ -36,6 +36,10 @@ Activá el entorno virtual
 ```
 ./venv/Scripts/Activate  |  ./venv/Scripts/activate.bat (Windows)
 ```
+Actualizá el comando _pip_
+```
+pip install --upgrade pip
+```
 Instalá las dependencias 
 ```
 pip install -r requirements.txt
