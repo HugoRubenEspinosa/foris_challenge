@@ -1,4 +1,4 @@
-# Foris.ai challenge ![Foris.ai](https://www.foris.ai/img/logo-foris.svg)
+# Foris.ai challenge <img src="https://www.foris.ai/img/logo-foris.svg" width="200">
 Este proyecto resuelve en forma automátizada el desafio de la empresa **Foris.ai** para el puesto de **"Back-end Software Engineer"**
 (https://www.getonbrd.com/empleos/programacion/back-end-software-engineer-foris-ai-remote-9155)
 
