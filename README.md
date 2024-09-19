@@ -19,8 +19,8 @@ Se base en código Python el cual implementa diferentes tecnologías para lograr
 
 ## Requerimientos
 Para poder ejecuta la aplicación y resolver el desafio necesitas:
-* **Python 3** (https://www.python.org/downloads/) <img src="https://www.python.org/static/img/python-logo.png" width="100" align="left">
-* **Docker** (https://www.docker.com/) <img src="https://www.docker.com/wp-content/uploads/2023/08/logo-guide-logos-1.svg" width="100" align="left">
+* **Python 3** (https://www.python.org/downloads/) <img src="https://www.python.org/static/img/python-logo.png" width="100">
+* **Docker** (https://www.docker.com/) <img src="https://www.docker.com/wp-content/uploads/2023/08/logo-guide-logos-1.svg" width="100">
 
 ## Pasos para ejecutar la solución
 Descargar el código en el directorio que desees
