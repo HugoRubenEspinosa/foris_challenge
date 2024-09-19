@@ -4,12 +4,15 @@ Este proyecto resuelve en forma automática el desafio de la empresa Foris.ai pa
 
 ## Solución
 Se base en código Python el cual implementa diferentes tecnologías para lograr resolver el desafio planteado.
-* Requests: Se utiliza para obtiene de diferentes end point (descripto el desafio) información para ir cumpliendo los pasos necesarios, entre ellos:
- - Datos para obtener el token bearer,
- - definiciones del desafio,
- - script para crear y poblar la base de datos.
- - rutas para validar los resultados
-* Docker: Se utiliza para crear una base de datos temporal donde crear las tablas y realizar las consultas sql que dan respuestas al desafio.
+* Requests:
+  Se utiliza para acceder a diferentes end point (descripto el desafio) para obtener datos para ir cumpliendo los pasos necesarios para resolver el desafío.
+  Lo que se va obteniendo paso a paso son:
+   - Datos para obtener el token bearer para autenticar sobre los end point
+   - detalles de como continar el desafio
+   - descarga del script para crear y poblar la base de datos
+   - rutas y formatos para validar los resultados
+* Docker:
+  Se utiliza para crear una base de datos temporal donde crear las tablas y realizar las consultas sql que dan respuestas al desafio.
 
 ## Requerimientos
 Para poder ejecuta la aplicación y resolver el desafio necesitas:
