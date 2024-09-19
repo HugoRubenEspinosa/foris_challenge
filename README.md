@@ -49,5 +49,5 @@ Ejecutá la aplicacion
 python ./src/main.py
 ```
 ## Personalizaciones
-En el caso que necesites realizar cambios en relación al entorno de ejecución, modificá el archivo **./src/config.ini**
-Si deseas modificar las consultas (query) a la base de datos poder modificar los archivos **./sql/query_challenge_1.sql** y **./sql/query_challenge_2.sql**
+En el caso que necesites realizar cambios en relación al entorno de ejecución, modificá el archivo ```./src/config.ini```
+Si deseas modificar las consultas (query) a la base de datos poder modificar los archivos ```./sql/query_challenge_1.sql``` y ```./sql/query_challenge_2.sql```
