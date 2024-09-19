@@ -23,22 +23,27 @@ Para poder ejecuta la aplicación y resolver el desafio necesitas:
 * **Docker** (https://www.docker.com/) <img src="https://www.docker.com/wp-content/uploads/2023/08/logo-guide-logos-1.svg" width="100">
 
 ## Pasos para ejecutar la solución
-Descargar el código en el directorio que desees
+Descargar y descomprimí el código en el directorio que desees
 _https://github.com/HugoRubenEspinosa/foris_challenge/archive/refs/heads/main.zip_
 
-Crear un entorno virtual 
+Abrí una consola en el directorio seleccionado
+
+Creá un entorno virtual (simplemente para mantener ordenada las dependencias)
 ```
 python -m venv venv
 ```
-Activar el entorno virtual
+Activá el entorno virtual
 ```
 ./venv/Script/Activate
 ```
-Instalar las dependencias 
+Instalá las dependencias 
 ```
 pip install -r requirements.txt
 ```
-Ejecutar la aplicacion 
+Ejecutá la aplicacion 
 ```
 python ./src/main.py
 ```
+## Personalizaciones
+En el caso que necesites realizar cambios en relación al entorno de ejecución, modificá el archivo **./src/config.ini**
+Si deseas modificar las consultas (query) a la base de datos poder modificar los archivos **./sql/query_challenge_1.sql** y **./sql/query_challenge_2.sql**
