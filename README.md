@@ -34,7 +34,7 @@ python -m venv venv
 ```
 Activá el entorno virtual
 ```
-./venv/Script/Activate
+./venv/Scripts/Activate  |  ./venv/Scripts/activate.bat (Windows)
 ```
 Instalá las dependencias 
 ```
