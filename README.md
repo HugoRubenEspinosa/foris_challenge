@@ -18,6 +18,12 @@ Docker
 
 ## Pasos para ejecutar la solución
 Descargar el código en el directorio que desees
-Crear un entorno virtual (python -m venv venv)
-Instalar las dependencias (pip install -r requirements.txt)
-Ejecutar la aplicacion (python ./src/main.py)
+Crear un entorno virtual 
+```
+python -m venv venv
+```
+Instalar las dependencias 
+```
+pip install -r requirements.txt
+```
+Ejecutar la aplicacion ```python ./src/main.py```
