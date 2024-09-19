@@ -23,12 +23,12 @@ Para poder ejecuta la aplicación y resolver el desafio necesitas:
 * **Docker** (https://www.docker.com/) <img src="https://www.docker.com/wp-content/uploads/2023/08/logo-guide-logos-1.svg" width="100">
 
 ## Pasos para ejecutar la solución
-Descargar y descomprimí el código en el directorio que desees
+Descargá y descomprimí el código en el directorio que desees
 _https://github.com/HugoRubenEspinosa/foris_challenge/archive/refs/heads/main.zip_
 
 Abrí una consola en el directorio seleccionado
 
-Creá un entorno virtual (simplemente para mantener ordenada las dependencias)
+Creá un entorno virtual (simplemente para mantener ordenadas las dependencias)
 ```
 python -m venv venv
 ```
