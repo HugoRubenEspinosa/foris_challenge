@@ -71,7 +71,7 @@ def save_challenge_document(file_dir, file_name, text):
     try:
         with open(file, "w") as file:
             file.writelines(text)
-        logging.info(f"{Bcolors.OKBLUE}File {file_name} was created succesfully.{Bcolors.ENDC}")
+        logging.info(f"{Bcolors.OKGREEN}File {file_name} was created succesfully.{Bcolors.ENDC}")
         step_error = False
     except Exception as e:
         logging.error(f"{Bcolors.FAIL}Save Challenge Instruction does not work - '{file_name}' in '{file_dir}'.{Bcolors.ENDC}")
@@ -111,15 +111,15 @@ def create_tar_in_memory(file_path):
 def remove_container(container_name):
     try:
         existing_container = docker.from_env().containers.get(container_name)
-        logging.info(f"{Bcolors.OKBLUE}Container '{container_name}' exists. Stopping and deleting...{Bcolors.ENDC}")
+        logging.debug(f"{Bcolors.OKBLUE}Container '{container_name}' exists. Stopping and deleting...{Bcolors.ENDC}")
 
         # Si el contenedor existe, detenerlo y eliminarlo
         existing_container.stop()
         existing_container.remove()
-        logging.info(f"{Bcolors.OKBLUE}Container '{container_name}' was deleted.{Bcolors.ENDC}")
+        logging.debug(f"{Bcolors.OKBLUE}Container '{container_name}' was deleted.{Bcolors.ENDC}")
 
     except docker.errors.NotFound:
-        logging.info(f"{Bcolors.OKBLUE}Container '{container_name}' does not exist.{Bcolors.ENDC}")
+        logging.debug(f"{Bcolors.OKBLUE}Container '{container_name}' does not exist.{Bcolors.ENDC}")
 
 
 def create_container_database(config_setting: ConfigSettings):
@@ -134,7 +134,7 @@ def create_container_database(config_setting: ConfigSettings):
     container_port = config_setting.db_docker_db_port
 
     # Remove container if exists
-    logging.info(f"{Bcolors.OKBLUE}Validate container '{container_name}' exist.{Bcolors.ENDC}")
+    logging.debug(f"{Bcolors.OKBLUE}Validate container '{container_name}' exist.{Bcolors.ENDC}")
     remove_container(container_name)
     
     # Crear el contenedor
@@ -301,7 +301,7 @@ def main():
         file = (file_path / file_name).resolve()
 
         step_error, file_dump = download_SQL_dump(url_path_end_point, access_token, file)
-        logging.info(f"{Bcolors.OKBLUE}'{file_dump}' was download.{Bcolors.ENDC}")
+        logging.info(f"{Bcolors.OKGREEN}'{file_dump}' was download.{Bcolors.ENDC}")
 
     if not step_error:
         step_name = "ai_analyzer"
@@ -369,11 +369,24 @@ def main():
         step_error, step_error_description, result = challenge_validate(url_path_end_point, access_token, number_of_groups, answer)
 
         if result:
-            logging.info(f"{Bcolors.OKGREEN}Validation successful. number_of_groups={number_of_groups}, answer={answer}{Bcolors.ENDC}")
+            logging.info(f"{Bcolors.OKGREEN}Validation successful. number_of_groups:{number_of_groups}, answer:{answer}{Bcolors.ENDC}")
         else:
             logging.info(f"{Bcolors.YELLOW}Validation fail for number_of_groups:{number_of_groups} & answer:{answer}{Bcolors.ENDC}")
             logging.info(f"{Bcolors.YELLOW}Error:{step_error} - Description: {step_error_description}{Bcolors.ENDC}")
             step_error = False
+
+
+    if not step_error:
+        print()
+        print()
+        print(f"    * ------------------------------------------- *")
+        print(f"    *    C H A L L E N G E   C O M P L E T E D    *")
+        print(f"    * ------------------------------------------- *")
+        print(f"      - number_of_groups: {number_of_groups}")
+        print(f"      - answer: {answer}")
+        print(f"    * ------------------------------------------- *")
+        print()
+        print()
 
     if step_error:
         logging.error(f"{Bcolors.FAIL}{step_name} - error: {step_error}{Bcolors.ENDC}")
@@ -382,7 +395,8 @@ def main():
 
 if __name__ == "__main__":
     try:
-        logging.basicConfig(format='%(asctime)-23s | %(processName)-12s | %(name)-12s | %(levelname)7s : %(message)s', level=logging.INFO)
+        #logging.basicConfig(format='%(asctime)-23s | %(processName)-12s | %(name)-12s | %(levelname)7s : %(message)s', level=logging.INFO)
+        logging.basicConfig(format='%(levelname)7s : %(message)s', level=logging.INFO)
 
         step_name = "ConfigSetting"
         logging.info(f"{Bcolors.OKBLUE}Executing [{step_name}]{Bcolors.ENDC}")
