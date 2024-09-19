@@ -1,5 +1,5 @@
-# Foris.ai challenge
-Este proyecto resuelve en forma automática el desafio de la empresa Foris.ai para el puesto de "Back-end Software Engineer"
+# Foris.ai challenge ![Foris.ai](https://www.foris.ai/img/logo-foris.svg)
+Este proyecto resuelve en forma automátizada el desafio de la empresa **Foris.ai** para el puesto de **"Back-end Software Engineer"**
 (https://www.getonbrd.com/empleos/programacion/back-end-software-engineer-foris-ai-remote-9155)
 
 ## Solución
@@ -13,6 +13,9 @@ Se base en código Python el cual implementa diferentes tecnologías para lograr
    - rutas y formatos para validar los resultados
 * Docker:
   Se utiliza para crear una base de datos temporal donde crear las tablas y realizar las consultas sql que dan respuestas al desafio.
+* MySQL-connector:
+  El uso de 2 bibliotecas específicas (_mysql-connector_ y _mysql-connector-python_) permite la interacción con la base de datos MySQL (para este caso, la que está funcionando en el docker) para resolver los desafío.
+  
 
 ## Requerimientos
 Para poder ejecuta la aplicación y resolver el desafio necesitas:
