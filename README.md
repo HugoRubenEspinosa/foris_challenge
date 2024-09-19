@@ -16,8 +16,8 @@ Se base en código Python el cual implementa diferentes tecnologías para lograr
 
 ## Requerimientos
 Para poder ejecuta la aplicación y resolver el desafio necesitas:
-Python 3
-Docker
+* Python 3
+* Docker
 
 ## Pasos para ejecutar la solución
 Descargar el código en el directorio que desees
@@ -26,6 +26,10 @@ https://github.com/HugoRubenEspinosa/foris_challenge/archive/refs/heads/main.zip
 Crear un entorno virtual 
 ```
 python -m venv venv
+```
+Activar el entorno virtual
+```
+./venv/Script/Activate
 ```
 Instalar las dependencias 
 ```
