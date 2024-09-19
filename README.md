@@ -38,7 +38,7 @@ Activá el entorno virtual
 ```
 Actualizá el comando _pip_
 ```
-pip install --upgrade pip
+python -m pip install --upgrade pip
 ```
 Instalá las dependencias 
 ```
