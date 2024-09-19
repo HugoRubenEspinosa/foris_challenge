@@ -71,7 +71,7 @@ def save_challenge_document(file_dir, file_name, text):
     try:
         with open(file, "w") as file:
             file.writelines(text)
-        logging.info(f"{Bcolors.OKGREEN}File {file_name} was created succesfully.{Bcolors.ENDC}")
+        logging.info(f"{Bcolors.OKGREEN}File '{file.name}' was created succesfully.{Bcolors.ENDC}")
         step_error = False
     except Exception as e:
         logging.error(f"{Bcolors.FAIL}Save Challenge Instruction does not work - '{file_name}' in '{file_dir}'.{Bcolors.ENDC}")
@@ -150,6 +150,7 @@ def create_container_database(config_setting: ConfigSettings):
                                         detach=True               
                                     )
     container.reload()
+    logging.info(f"{Bcolors.OKGREEN}Container '{container_name}' was created successfully.{Bcolors.ENDC}")
 
     # Esperar a que MySQL esté listo
     waiting_seconds = 30
@@ -189,7 +190,7 @@ def create_container_db_tables(config_setting: ConfigSettings, container, sql_fi
 
     # Mostrar la salida del comando
     logging.debug(f"{Bcolors.OKCYAN}{exec_log.output.decode()}{Bcolors.ENDC}")
-    logging.info(f"{Bcolors.OKGREEN}Databases was created from '{file_name}' successfully{Bcolors.ENDC}")
+    logging.info(f"{Bcolors.OKGREEN}Databases was created from '{file_name}' successfully in container '{config_setting.db_docker_container_name}'{Bcolors.ENDC}")
 
     return container
 
@@ -301,7 +302,7 @@ def main():
         file = (file_path / file_name).resolve()
 
         step_error, file_dump = download_SQL_dump(url_path_end_point, access_token, file)
-        logging.info(f"{Bcolors.OKGREEN}'{file_dump}' was download.{Bcolors.ENDC}")
+        logging.info(f"{Bcolors.OKGREEN}'{file_dump}' was downloaded.{Bcolors.ENDC}")
 
     if not step_error:
         step_name = "ai_analyzer"
@@ -414,3 +415,4 @@ if __name__ == "__main__":
     finally:
         container_name = config_setting.db_docker_container_name
         remove_container(container_name)
+        logging.info(f"{Bcolors.OKBLUE}Container {container_name} was removed.{Bcolors.ENDC}")
