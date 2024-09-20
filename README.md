@@ -3,7 +3,7 @@ Este proyecto resuelve en forma automátizada el desafio de la empresa **Foris.a
 (https://www.getonbrd.com/empleos/programacion/back-end-software-engineer-foris-ai-remote-9155)
 
 ## Challenge
-<FRAME src="https://mini-challenge.foris.ai/">
+https://mini-challenge.foris.ai/
 
 ## Solución
 Se base en código Python el cual implementa diferentes tecnologías para lograr resolver el desafio planteado.
