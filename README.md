@@ -11,9 +11,9 @@ Se base en código Python el cual implementa diferentes tecnologías para lograr
   Se utiliza para acceder a diferentes end point (descripto el desafio) para obtener datos para ir cumpliendo los pasos necesarios para resolver el desafío.
   Lo que se va obteniendo paso a paso son:
    - Datos para obtener el token bearer para autenticar sobre los end point
-   - detalles de como continar el desafio
+   - detalles de como continuar el desafio (pasos)
    - descarga del script para crear y poblar la base de datos
-   - rutas y formatos para validar los resultados
+   - rutas (path) y formatos para validar los resultados
 * **docker**:
   Se utiliza para crear una base de datos temporal donde crear las tablas y realizar las consultas sql que dan respuestas al desafio.
 * **mysql-connector**:
